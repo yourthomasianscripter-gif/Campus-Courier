@@ -1,0 +1,400 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Montserrat', Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-display: 'Montserrat', sans-serif;
+  --font-mono: 'Montserrat', monospace;
+}
+
+@layer base {
+  :root {
+    --font-serif: 'Montserrat', Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Montserrat', sans-serif;
+    --font-mono: 'Montserrat', monospace;
+  }
+
+  body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  *, *::before, *::after {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-serif {
+  font-family: 'Montserrat', serif !important;
+}
+
+.font-sans {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.font-display {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.font-mono {
+  font-family: 'Montserrat', monospace !important;
+}
+
+/* Custom newspaper styling and subtle paper texture effect */
+.newspaper-headline {
+  font-family: 'Montserrat', sans-serif !important;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+/* Custom scrollbar for mobile / desktop */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #171717;
+}
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #525252;
+}
+
+/* Ambient Animated Dark Orange & Light Orange Mixing with Black */
+@keyframes orangeGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatDarkOrange {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.22;
+  }
+  33% {
+    transform: translate(60px, -40px) scale(1.18);
+    opacity: 0.32;
+  }
+  66% {
+    transform: translate(-50px, 50px) scale(0.92);
+    opacity: 0.18;
+  }
+}
+
+@keyframes floatLightOrange {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.18;
+  }
+  33% {
+    transform: translate(-70px, 60px) scale(0.92);
+    opacity: 0.28;
+  }
+  66% {
+    transform: translate(50px, -30px) scale(1.14);
+    opacity: 0.20;
+  }
+}
+
+@keyframes floatAmberAura {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(0.96);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translate(40px, 70px) scale(1.15);
+    opacity: 0.25;
+  }
+}
+
+/* Yellow and Black Gradient Mixing Animations */
+@keyframes yellowBlackFlow {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 40%;
+  }
+  50% {
+    background-position: 60% 100%;
+  }
+  75% {
+    background-position: 10% 70%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes yellowSwirl1 {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(140px, -70px) rotate(120deg) scale(1.22);
+  }
+  66% {
+    transform: translate(-100px, 90px) rotate(240deg) scale(0.88);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes yellowSwirl2 {
+  0% {
+    transform: translate(0px, 0px) rotate(360deg) scale(0.95);
+  }
+  33% {
+    transform: translate(-120px, 80px) rotate(240deg) scale(1.28);
+  }
+  66% {
+    transform: translate(130px, -60px) rotate(120deg) scale(1.08);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg) scale(0.95);
+  }
+}
+
+@keyframes blackVoidMix {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.88;
+  }
+  33% {
+    transform: translate(80px, -40px) scale(1.3);
+    opacity: 0.95;
+  }
+  66% {
+    transform: translate(-70px, 60px) scale(1.1);
+    opacity: 0.82;
+  }
+}
+
+@keyframes yellowPulseGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: translate(-50%, -50%) scale(1.18);
+  }
+}
+
+@keyframes yellowBlackBorderSpin {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes liquidMixWave {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.15);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.animate-yellow-black-mesh {
+  background: radial-gradient(circle at 15% 25%, rgba(250, 204, 21, 0.28) 0%, transparent 45%),
+              radial-gradient(circle at 85% 75%, rgba(217, 119, 6, 0.25) 0%, transparent 48%),
+              radial-gradient(circle at 50% 50%, rgba(234, 179, 8, 0.20) 0%, transparent 60%),
+              radial-gradient(circle at 80% 20%, rgba(254, 240, 138, 0.15) 0%, transparent 40%),
+              linear-gradient(135deg, #030304 0%, #141105 20%, #030304 40%, #1f1807 65%, #050505 85%, #120e03 100%);
+  background-size: 260% 260%;
+  animation: yellowBlackFlow 18s ease-in-out infinite;
+}
+
+.animate-yellow-swirl-1 {
+  animation: yellowSwirl1 20s ease-in-out infinite;
+}
+
+.animate-yellow-swirl-2 {
+  animation: yellowSwirl2 24s ease-in-out infinite;
+}
+
+.animate-black-void {
+  animation: blackVoidMix 16s ease-in-out infinite alternate;
+}
+
+.animate-yellow-pulse-glow {
+  animation: yellowPulseGlow 7s ease-in-out infinite;
+}
+
+.animate-yellow-black-border {
+  background-size: 250% 250%;
+  animation: yellowBlackBorderSpin 5s ease infinite;
+}
+
+.animate-liquid-wave {
+  animation: liquidMixWave 28s linear infinite;
+}
+
+.animate-float-dark-orange {
+  animation: floatDarkOrange 22s ease-in-out infinite alternate;
+}
+
+.animate-float-light-orange {
+  animation: floatLightOrange 26s ease-in-out infinite alternate;
+}
+
+.animate-float-amber-aura {
+  animation: floatAmberAura 30s ease-in-out infinite alternate;
+}
+
+.animate-orange-mesh {
+  background-size: 250% 250%;
+  animation: orangeGradientShift 20s ease infinite;
+}
+
+/* Glassmorphism Design System */
+.glass-panel {
+  background: rgba(18, 18, 22, 0.68);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.42), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-subtle {
+  background: rgba(22, 22, 28, 0.52);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+}
+
+.glass-card {
+  background: rgba(20, 20, 26, 0.60);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 24px -2px rgba(0, 0, 0, 0.38), inset 0 1px 0 0 rgba(255, 255, 255, 0.07);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: rgba(26, 26, 34, 0.78);
+  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 12px 36px -4px rgba(245, 158, 11, 0.18), 0 0 24px rgba(245, 158, 11, 0.12), inset 0 1px 0 0 rgba(255, 255, 255, 0.16);
+  transform: translateY(-2.5px);
+}
+
+.glass-card-interactive {
+  background: rgba(20, 20, 26, 0.58);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 24px -2px rgba(0, 0, 0, 0.38), inset 0 1px 0 0 rgba(255, 255, 255, 0.07);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.glass-card-interactive:hover {
+  background: rgba(28, 28, 38, 0.82);
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 14px 40px -4px rgba(245, 158, 11, 0.22), 0 0 28px rgba(245, 158, 11, 0.14), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px) scale(1.005);
+}
+
+.glass-card-interactive:active {
+  transform: translateY(-1px) scale(0.995);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.2s ease;
+}
+
+.glass-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.glass-pill-active {
+  background: linear-gradient(135deg, rgba(254, 240, 138, 0.22) 0%, rgba(250, 204, 21, 0.18) 50%, rgba(245, 158, 11, 0.26) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(250, 204, 21, 0.65);
+  color: #fef08a;
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.28), inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+}
+
+/* Yellow Gradient Design System */
+.yellow-gradient-bg {
+  background: linear-gradient(135deg, #fef08a 0%, #facc15 35%, #f59e0b 75%, #d97706 100%);
+}
+
+.yellow-gradient-warm {
+  background: linear-gradient(135deg, #fef9c3 0%, #fde047 30%, #eab308 70%, #d97706 100%);
+}
+
+.yellow-gradient-text {
+  background: linear-gradient(135deg, #fef9c3 0%, #fde047 30%, #f59e0b 75%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.yellow-gradient-subtle-text {
+  background: linear-gradient(135deg, #fef08a 0%, #fde047 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.yellow-gradient-btn {
+  background: linear-gradient(135deg, #fef08a 0%, #facc15 35%, #f59e0b 80%, #d97706 100%);
+  color: #0c0d12;
+  font-weight: 800;
+  box-shadow: 0 4px 18px rgba(245, 158, 11, 0.38), inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.yellow-gradient-btn:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #fef08a 25%, #facc15 65%, #f59e0b 100%);
+  box-shadow: 0 6px 24px rgba(245, 158, 11, 0.55), 0 0 20px rgba(250, 204, 21, 0.4);
+  transform: translateY(-1.5px);
+}
+
+.yellow-gradient-btn:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.yellow-gradient-glass {
+  background: linear-gradient(135deg, rgba(254, 240, 138, 0.16) 0%, rgba(250, 204, 21, 0.12) 50%, rgba(245, 158, 11, 0.2) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(250, 204, 21, 0.45);
+  box-shadow: 0 0 24px rgba(245, 158, 11, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.22);
+}
+
+.yellow-gradient-glow {
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.4), 0 0 50px rgba(245, 158, 11, 0.2);
+}
+
+

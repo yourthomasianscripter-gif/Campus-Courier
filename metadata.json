@@ -1,0 +1,8 @@
+{
+  "name": "Campus Courier",
+  "description": "Professional Philippine news, disaster tracking, Jose Rizal El Filibusterismo historical point, science, health, and data insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
